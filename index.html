@@ -46,7 +46,7 @@
 		<div class="container">
 			<div class="panel-group" id="accordion">
 				<div class="panel">
-					<div id="info" class="reit-page panel-collapse collapse in">
+					<div id="info" class="reit-page panel-collapse in">
 						<a name="info"></a>
 						<div class="page-header">
 							<h1>REIT'2017: 1st International Workshop on Radio Electronics &amp; Information Technologies</h1>
@@ -78,7 +78,7 @@
 				</div>
 
 				<div class="panel">
-					<div id="papers" class="reit-page panel-collapse collapse">
+					<div id="papers" class="reit-page panel-collapse">
 						<a name="papers"></a>
 						<div class="page-header">
 							<h1>Accepted papers</h1>
@@ -101,7 +101,7 @@
 				</div>
 				
 				<div class="panel">
-					<div id="committees" class="reit-page panel-collapse collapse">
+					<div id="committees" class="reit-page panel-collapse">
 						<a name="committees"></a>
 						<div class="page-header">
 							<h1>Committees</h1>
@@ -110,7 +110,7 @@
 				</div>
 				
 				<div class="panel">
-					<div id="contacts" class="reit-page panel-collapse collapse">
+					<div id="contacts" class="reit-page panel-collapse">
 						<a name="contacts"></a>
 						<div class="page-header">
 							<h1>Contacts</h1>
@@ -121,7 +121,8 @@
 		</div>
 		<script>
 			$(document).ready(function() {
-				//$(".reit-page").css("display", "none");
+				// If js enabled, let's hide tabs other than active
+				$(".reit-page").addClass("collapse");
 			});
 			
 			$('.reit-menu a').on('click',function(e){
