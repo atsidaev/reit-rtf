@@ -35,5 +35,35 @@
 	img {
 		width: 100%;
 		padding-bottom: 24px;
+		max-width: 240px;
 	}
+}
+
+// Footer
+
+@footer-height: 24px;
+
+.reit-footer {
+	text-align: right;
+	
+	img {
+		height: @footer-height;
+		width: 45%;
+	}
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: @footer-height;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: @footer-height;
 }
