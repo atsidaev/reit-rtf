@@ -1,3 +1,6 @@
+@rtfDark: #005292;
+@rtfLight: #007eb8;
+
 .inst-logo {
 	img {
 		width: 100px;
@@ -22,6 +25,11 @@
 .date-future {
 	font-weight: bold;
 	color: green;
+}
+
+.date-after {
+	font-weight: bold;
+	color: @rtfDark;
 }
 
 .panel {
@@ -66,4 +74,26 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: @footer-height;
+}
+
+.papers, .committees {
+	li {
+		padding-top: 10px;
+		color: gray;
+		&>span {
+			font-size: 12px;
+			display: block;
+			color: gray;
+		}
+		
+		&>label {
+			display: block;
+			margin-bottom: 0;
+			color: black;
+		}
+	}
+}
+
+h1 {
+	color: @rtfDark!important;
 }
