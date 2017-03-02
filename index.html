@@ -426,6 +426,31 @@
 			$(document).ready(function() {
 				// If js enabled, let's hide tabs other than active
 				$(".reit-page").addClass("collapse");
+				
+				var nft = $(".navbar-full-title");
+				nft.text(nft.text());
+				var nb = $(".navbar-brand");
+
+				var onresize = function() {
+					var lwidth = $(".earth-roll").width();
+					var rwidth = $(".inst-logo").width();
+					var fullwidth = $(window).width();
+					if (lwidth > 0)
+					{
+						nb.css("width", fullwidth - lwidth - rwidth - 20);
+						nb.css("padding-top", (128 - nft.height()) / 2);
+						nb.css("font-size", "18px");
+					}
+					else
+					{
+						nb.css("width", "");
+						nb.css("padding-top", "15px");
+						nb.css("font-size", "");
+					}
+				};
+				onresize();
+				
+				$(window).resize(onresize);
 			});
 			
 			$('.reit-menu a').on('click',function(e){

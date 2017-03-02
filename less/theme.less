@@ -11,6 +11,7 @@
 @import "variables.less";
 @import "mixins.less";
 
+@import "reit-variables.less";
 @import "reit.less";
 
 //
@@ -149,12 +150,12 @@
 
 // Inverted navbar
 .navbar-inverse {
-  #gradient > .vertical(@start-color: lighten(@navbar-inverse-bg, 10%); @end-color: @navbar-inverse-bg);
+  #gradient > .vertical(@start-color: darken(@rtfDark, 20%); @end-color: darken(@rtfDark, 10%));
   .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered; see https://github.com/twbs/bootstrap/issues/10257
   border-radius: @navbar-border-radius;
   .navbar-nav > .open > a,
   .navbar-nav > .active > a {
-    #gradient > .vertical(@start-color: @navbar-inverse-link-active-bg; @end-color: lighten(@navbar-inverse-link-active-bg, 2.5%));
+    #gradient > .vertical(@start-color: darken(@rtfDark, 20%); @end-color: @rtfLight);
     .box-shadow(inset 0 3px 9px rgba(0,0,0,.25));
   }
 
