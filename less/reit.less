@@ -3,16 +3,36 @@
 .inst-logo {
 	img {
 		width: 175px;
-	}
-	a {
-		padding: 0!important;
-		display: inline-block!important;
+		vertical-align: top;
+		padding-top: 8px;
+		padding-bottom: 8px;
 	}
 }
 
 .earth-roll img {
 	height: 128px;
 	padding-right: 24px;
+}
+
+.navbar-full-title {
+	display: none;
+}
+
+@media (min-width: @screen-sm) and (max-width: 1547px) {
+	.reit-menu li a {
+		padding-top: 12;
+		padding-bottom: 12;
+	}
+	
+	.navbar-brand {
+		padding-top: 11px;
+		font-size: 15px;
+		font-weight: bold;
+	}
+	
+	.navbar-full-title {
+		display: inline;
+	}
 }
 
 .date-past {
