@@ -83,10 +83,9 @@ body {
 	li {
 		padding-top: 10px;
 		color: gray;
-		&>span {
-			font-size: 12px;
+		
+		& > span {
 			display: block;
-			color: gray;
 		}
 		
 		&>label {
@@ -95,6 +94,15 @@ body {
 			color: black;
 		}
 	}
+}
+
+.committees > li > span {
+	color: gray;
+}
+
+.papers > li > span {
+	color: @rtfDark;
+	font-weight: bold;
 }
 
 h1 {
@@ -108,3 +116,14 @@ h1 {
     #gradient > .vertical(@start-color: darken(@rtfDark, 20%); @end-color: @rtfLight)!important;
   }
 } 
+
+.programme {
+	tr.success {
+		font-weight: bold;
+	}
+
+	td:first-child {
+		white-space: nowrap;
+		text-align: right;
+	}
+}
