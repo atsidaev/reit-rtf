@@ -1,9 +1,8 @@
-@rtfDark: #005292;
-@rtfLight: #007eb8;
+@import "reit-variables.less";
 
 .inst-logo {
 	img {
-		width: 100px;
+		width: 175px;
 	}
 	a {
 		padding: 0!important;
@@ -12,7 +11,7 @@
 }
 
 .earth-roll img {
-	height: 70px;
+	height: 128px;
 	padding-right: 24px;
 }
 
@@ -60,6 +59,10 @@
 	}
 }
 
+.reit-menu a {
+	font-weight: bold;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -97,3 +100,11 @@ body {
 h1 {
 	color: @rtfDark!important;
 }
+
+.navbar-reit {
+  #gradient > .vertical(@start-color: darken(@rtfDark, 20%); @end-color: darken(@rtfDark, 10%))!important;
+  .navbar-nav > .open > a,
+  .navbar-nav > .active > a {
+    #gradient > .vertical(@start-color: darken(@rtfDark, 20%); @end-color: @rtfLight)!important;
+  }
+} 
