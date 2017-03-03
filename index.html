@@ -426,7 +426,7 @@
 			$(document).ready(function() {
 				// If js enabled, let's hide tabs other than active
 				$(".reit-page").addClass("collapse");
-				
+
 				var nft = $(".navbar-full-title");
 				nft.text(nft.text());
 				var nb = $(".navbar-brand");
@@ -435,7 +435,7 @@
 					var lwidth = $(".earth-roll").width();
 					var rwidth = $(".inst-logo").width();
 					var fullwidth = $(window).width();
-					if (lwidth > 0)
+					if (nft.is(":visible") && lwidth > 0)
 					{
 						nb.css("width", fullwidth - lwidth - rwidth - 20);
 						nb.css("padding-top", (128 - nft.height()) / 2);
@@ -444,7 +444,7 @@
 					else
 					{
 						nb.css("width", "");
-						nb.css("padding-top", "15px");
+						nb.css("padding-top", "53px");
 						nb.css("font-size", "");
 					}
 				};
