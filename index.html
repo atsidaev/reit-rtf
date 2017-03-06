@@ -106,9 +106,8 @@
 
 				<div class="panel">
 					<div id="submission" class="reit-page panel-collapse">
-						<a name="submittion"></a>
 						<div class="page-header">
-							<h1>Paper submission</h1>
+							<h1>Paper submission <a name="submittion" href="#submittion"><span class="glyphicon glyphicon-link"></span></a></h1>
 						</div>
 						
 						<p>Authors are invited to submit papers in the PDF format written in <strong>LaTeX</strong> 
@@ -126,9 +125,8 @@
 
 				<div class="panel">
 					<div id="papers" class="reit-page panel-collapse">
-						<a name="papers"></a>
 						<div class="page-header">
-							<h1>Accepted papers</h1>
+							<h1>Accepted papers <a name="papers" href="#papers"><span class="glyphicon glyphicon-link"></span></a></h1>
 						</div>
 						<ol class="papers">
 							<li>
@@ -193,9 +191,8 @@
 				
 				<div class="panel">
 					<div id="committees" class="reit-page panel-collapse">
-						<a name="committees"></a>
 						<div class="page-header">
-							<h1>Committees</h1>
+							<h1>Committees <a name="committees" href="#committees"><span class="glyphicon glyphicon-link"></span></a></h1>
 						</div>
 						<h2>Program Committee</h2>
 						<ul class="committees">
@@ -291,9 +288,8 @@
 
 				<div class="panel">
 					<div id="programme" class="reit-page panel-collapse">
-						<a name="programme"></a>
 						<div class="page-header">
-							<h1>Programme of REIT'2017</h1>
+							<h1>Programme of REIT'2017 <a name="programme" href="#programme"><span class="glyphicon glyphicon-link"></span></a></h1>
 						</div>
 						<h2>March 15, 2017 | Room R-127</h2>
 						<table class="table programme">
@@ -385,9 +381,8 @@
 
 				<div class="panel">
 					<div id="presentations" class="reit-page panel-collapse">
-						<a name="presentations"></a>
 						<div class="page-header">
-							<h1>Presentations</h1>
+							<h1>Presentations <a name="presentations" href="#presentations"><span class="glyphicon glyphicon-link"></span></a></h1>
 						</div>
 						
 						Presentations will be available soon.
@@ -396,9 +391,8 @@
 
 				<div class="panel">
 					<div id="proceedings" class="reit-page panel-collapse">
-						<a name="proceedings"></a>
 						<div class="page-header">
-							<h1>Proceedings</h1>
+							<h1>Proceedings <a name="proceedings" href="#proceedings"><span class="glyphicon glyphicon-link"></span></a></h1>
 						</div>
 						Proceedings of REIT'2017 shall be submitted to CEUR-WS.org for online publication. Papers will be available at
 						<a href="http://ceur-ws.org">http://ceur-ws.org</a> after indexing.
@@ -407,9 +401,8 @@
 
 				<div class="panel">
 					<div id="contacts" class="reit-page panel-collapse">
-						<a name="contacts"></a>
 						<div class="page-header">
-							<h1>Contacts</h1>
+							<h1>Contacts <a name="contacts" href="#contacts"><span class="glyphicon glyphicon-link"></span></a></h1>
 						</div>
 						<ul class="committees">
 							<li>
@@ -445,6 +438,17 @@
 			$(document).ready(function() {
 				// If js enabled, let's hide tabs other than active
 				$(".reit-page").addClass("collapse");
+
+				var a = window.location.hash.substr(1);
+				if (a != null && a != "")
+				{
+					var page = $(".reit-page#" + a);
+					if (page.length > 0)
+					{
+						$(".reit-page").removeClass("in");
+						page.addClass("in");
+					}
+				}
 
 				var nft = $(".navbar-full-title");
 				nft.text(nft.text());
