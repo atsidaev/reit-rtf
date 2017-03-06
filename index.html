@@ -445,8 +445,13 @@
 					var page = $(".reit-page#" + a);
 					if (page.length > 0)
 					{
+						// Switch page
 						$(".reit-page").removeClass("in");
 						page.addClass("in");
+						
+						// Switch navbar
+						$(".reit-menu li").removeClass("active");
+						$(".reit-menu a[href='#" + a + "']").parent().addClass("active");
 					}
 				}
 
